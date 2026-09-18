@@ -87,7 +87,8 @@ const STATES = {
     items: [
       { text: 'Prendre un anxiolytique si prescrit' },
       { text: 'Cohérence cardiaque — inspire 5s, expire 5s, répète 5×' },
-      { text: 'Débunker la situation avec Claude', url: 'https://claude.ai' },
+      { text: 'Débunker la situation avec ChatGPT', url: 'https://chatgpt.com' },
+      { text: 'Appelle une amie — Typhaine, Marie, Maëlle, Colette, Gabrielle, Julie' },
     ]
   },
   ennui: {
@@ -100,7 +101,7 @@ const STATES = {
       { text: 'Écrire dans mon calepin' },
       { text: 'Dessiner' },
       { text: 'Faire un Decat Coach' },
-      { text: 'Planifier ma journée' },
+      { text: 'Planifier ma journée', url: 'https://tasks.google.com/' },
     ]
   },
 };
