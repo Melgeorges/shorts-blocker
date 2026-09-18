@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 240px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f172a; color: #f1f5f9; padding: 16px;
+    }
+    h1 { font-size: 13px; font-weight: 700; color: #94a3b8; text-transform: uppercase;
+         letter-spacing: .06em; margin-bottom: 12px; }
+    .row { display: flex; align-items: center; justify-content: space-between;
+           padding: 10px 12px; border-radius: 12px; margin-bottom: 8px; }
+    .row.shorts  { background: #1e293b; }
+    .row.insta   { background: #1e293b; }
+    .label { font-size: 13px; font-weight: 600; }
+    .bar-wrap { width: 100%; height: 4px; background: #334155; border-radius: 2px; margin-top: 6px; }
+    .bar { height: 4px; border-radius: 2px; transition: width .3s; }
+    .bar.shorts { background: #ef4444; }
+    .bar.insta  { background: #f59e0b; }
+    .time { font-size: 18px; font-weight: 700; }
+    .time.ok     { color: #34d399; }
+    .time.warn   { color: #f59e0b; }
+    .time.danger { color: #ef4444; }
+    .reset { font-size: 11px; color: #475569; margin-top: 12px; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>⏱ Shorts Blocker</h1>
+  <div class="row shorts">
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="label">📱 YT Shorts</span>
+        <span class="time" id="shorts-time">0:00</span>
+      </div>
+      <div class="bar-wrap"><div class="bar shorts" id="shorts-bar" style="width:0%"></div></div>
+    </div>
+  </div>
+  <div class="row insta">
+    <div style="flex:1">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span class="label">📸 Instagram</span>
+        <span class="time" id="insta-time">0:00</span>
+      </div>
+      <div class="bar-wrap"><div class="bar insta" id="insta-bar" style="width:0%"></div></div>
+    </div>
+  </div>
+  <p class="reset" id="reset-info"></p>
+  <script src="popup.js"></script>
+</body>
+</html>
